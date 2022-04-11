@@ -1,0 +1,55 @@
+.form-container {
+  width: 500px;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+.form-title {
+  font-size: 35px;
+  color: #2a414f;
+  font-weight: 400;
+}
+.input-group {
+  width: 415px;
+  height: 84px;
+  margin-bottom: 20px;
+}
+.input-group label {
+  display: block;
+  font-size: 17px;
+  color: #2a414f;
+  margin-bottom: 10px;
+}
+.input-group input {
+  width: 95%;
+  height: 50px;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.form-submit {
+  width: 95%;
+  height: 55px;
+  font-size: 21px;
+  color: #0e161a;
+  font-weight: 400;
+  border: 1px solid #ff9c0791;
+  border-radius: 5px;
+  background-color: rgba(255, 153, 0, 0.3);
+}
+.singup-para {
+  font-size: 15px;
+  color: #2a414f;
+}
+.signup-page {
+  color: #ff9900;
+  cursor: pointer;
+}
+.form-submit:hover {
+  background-color: rgba(255, 153, 0, 0.5);
+}

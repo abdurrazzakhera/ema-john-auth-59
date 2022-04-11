@@ -5,6 +5,8 @@ import Header from "./components/Header/Header";
 import Invertorys from "./components/Inventorys/Invertorys";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
+import Login from "./components/Login/Login";
+import SingUp from "./components/SingUp/SingUp";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path='/orders' element={<Orders></Orders>}></Route>
         <Route path='/inventory' element={<Invertorys></Invertorys>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/singup' element={<SingUp></SingUp>} />
       </Routes>
     </div>
   );
