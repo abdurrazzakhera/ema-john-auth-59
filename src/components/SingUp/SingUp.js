@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./SingUp.css";
 
 const SingUp = () => {
@@ -7,6 +9,9 @@ const SingUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [createUserWithEmailAndPassword, user] =
+    useCreateUserWithEmailAndPassword(auth);
+  const navigate = useNavigate();
 
   const handelemail = (event) => {
     setEmail(event.target.value);
@@ -23,7 +28,18 @@ const SingUp = () => {
       setError("Your tow password did not match");
       return;
     }
+    if (password.length <= 6) {
+      setError("password must be 6 charecter or longer");
+      return;
+    }
+    setError("");
+
+    createUserWithEmailAndPassword(email, password);
   };
+
+  if (user) {
+    navigate("/");
+  }
   return (
     <div className='form-container'>
       <div>
